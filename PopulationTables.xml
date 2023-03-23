@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<populations>
+	<population Name="Scrap 1" Load="Merge">
+	  <group Name="Items" Load="Merge">
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_CulinaryCyst" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_MoodLenses" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_ScouringGel" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_UniversalInterfaceCable" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_MotorizedSponge" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_EtchingStylus" />
+	  </group>
+	</population>
+
+	<population Name="Scrap 2" Load="Merge">
+	  <group Name="Items" Load="Merge">
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_CulinaryCyst" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_MoodLenses" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_ScouringGel" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_UniversalInterfaceCable" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_Orbsinger" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_StasisTorque" />
+	  </group>
+	</population>
+
+	<population Name="Scrap 3" Load="Merge">
+	  <group Name="Items" Load="Merge">
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_CulinaryCyst" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_MoodLenses" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_ScouringGel" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_UniversalInterfaceCable" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_ModularInstrument" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_EndlessPuzzle" />
+	  </group>
+	</population>
+
+	<population Name="Scrap 4" Load="Merge">
+	  <group Name="Items" Load="Merge">
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_CulinaryCyst" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_MoodLenses" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_ScouringGel" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_UniversalInterfaceCable" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_LaserScaper" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_AroMatic" />
+	  </group>
+	</population>
+
+	<population Name="Scrap 5" Load="Merge">
+	  <group Name="Items" Load="Merge">
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_CulinaryCyst" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_MoodLenses" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_ScouringGel" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_UniversalInterfaceCable" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_SelfReplicatingPigment" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_RelaxationSand" />
+	  </group>
+	</population>
+
+	<population Name="Scrap 6" Load="Merge">
+	  <group Name="Items" Load="Merge">
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_CulinaryCyst" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_MoodLenses" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_ScouringGel" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_UniversalInterfaceCable" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_LaserScale" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_ReprogrammableSculpture" />
+	  </group>
+	</population>
+
+	<population Name="Scrap 7" Load="Merge">
+	  <group Name="Items" Load="Merge">
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_CulinaryCyst" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_MoodLenses" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_ScouringGel" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_UniversalInterfaceCable" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_OralImplement" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_CompleteCodex" />
+	  </group>
+	</population>
+
+	<population Name="Scrap 8" Load="Merge">
+	  <group Name="Items" Load="Merge">
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_CulinaryCyst" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_MoodLenses" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_ScouringGel" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_UniversalInterfaceCable" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_StellarMemory" />
+			<object Weight="5" Number="1" Blueprint="MUNDANITY_FrozenJoy" />
+	  </group>
+	</population>
+</populations>
