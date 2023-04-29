@@ -87,6 +87,7 @@
     <part Name="TinkerItem" Bits="003" CanDisassemble="true" CanBuild="true" />
     <part Name="Examiner" Complexity="3" />
     <part Name="Commerce" Value="52" />
+    <part Name="MUNDANITY_EndlessPuzzle" />
     <tag Name="NoDataDisk" />
   </object>
 
