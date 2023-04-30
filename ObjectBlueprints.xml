@@ -24,6 +24,7 @@
     <part Name="TinkerItem" Bits="0B" CanDisassemble="true" CanBuild="true" />
     <part Name="Examiner" Complexity="1" />
     <part Name="Commerce" Value="15" />
+    <part Name="MUNDANITY_Cleaner"/>
     <tag Name="NoDataDisk" />
   </object>
 
@@ -42,6 +43,7 @@
     <part Name="TinkerItem" Bits="001" CanDisassemble="true" CanBuild="true" />
     <part Name="Examiner" Complexity="1" />
     <part Name="Commerce" Value="23" />
+    <part Name="MUNDANITY_Cleaner"/>
     <tag Name="NoDataDisk" />
   </object>
 
