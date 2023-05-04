@@ -164,10 +164,11 @@
 
   <object Name="MUNDANITY_CompleteCodex" Inherits="Scrap">
     <part Name="Render" Tile="items/CompleteCodex.png" ColorString="&amp;K" DetailColor="Y" DisplayName="complete codex" />
-    <part Name="Description" Short="Something analogous to matte black stone has been carved into a scrivener’s tablet. Its surface peaks and depresses to form glyphs when held. “Repository inaccessible” are the only words it knows." />
+    <part Name="Description" Short="Something analogous to matte black stone has been carved into a scrivener’s tablet. Its surface peaks and depresses to form glyphs when held. Words ripple across it in waves." />
     <part Name="TinkerItem" Bits="007" CanDisassemble="true" CanBuild="true" />
     <part Name="Examiner" Complexity="7" />
     <part Name="Commerce" Value="113" />
+    <part Name="MUNDANITY_CompleteCodex" />
     <tag Name="NoDataDisk" />
   </object>
 
