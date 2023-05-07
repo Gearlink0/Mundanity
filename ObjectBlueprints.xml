@@ -150,6 +150,7 @@
     <part Name="TinkerItem" Bits="006" CanDisassemble="true" CanBuild="true" />
     <part Name="Examiner" Complexity="6" />
     <part Name="Commerce" Value="98" />
+    <part Name="MUNDANITY_ReprogrammableSculpture" DefaultTile="items/ReprogrammableSculpture.png" DefaultColor="&amp;b" DefaultDetailColor="y"/>
     <tag Name="NoDataDisk" />
   </object>
 
