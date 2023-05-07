@@ -179,6 +179,7 @@
     <part Name="TinkerItem" Bits="008" CanDisassemble="true" CanBuild="true" />
     <part Name="Examiner" Complexity="8" />
     <part Name="Commerce" Value="128" />
+    <part Name="MUNDANITY_RealityDistortionDescription" StabilizedDescription="A clear crystal wafer."/>
     <tag Name="NoDataDisk" />
   </object>
 
@@ -188,6 +189,7 @@
     <part Name="TinkerItem" Bits="008" CanDisassemble="true" CanBuild="true" />
     <part Name="Examiner" Complexity="8" />
     <part Name="Commerce" Value="128" />
+    <part Name="MUNDANITY_RealityDistortionDescription" StabilizedDescription="An anonymous grey sphere."/>
     <tag Name="NoDataDisk" />
   </object>
 
