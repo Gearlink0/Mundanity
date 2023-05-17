@@ -10,6 +10,7 @@
   </object>
 
   <object Name="MUNDANITY_MoodLenses" Inherits="Scrap">
+    <removepart Name="Metal" />
     <part Name="Render" Tile="items/MoodLenses.png" ColorString="&amp;y" DetailColor="Y" DisplayName="mood lenses" />
     <part Name="Description" Short="Ghostly plastic caps for the eyes tint and bend light to paint the world in accordance with the desired disposition." />
     <part Name="TinkerItem" Bits="0G" CanDisassemble="true" CanBuild="true" />
@@ -117,6 +118,7 @@
   </object>
 
   <object Name="MUNDANITY_SelfReplicatingPigment" Inherits="Scrap">
+    <removepart Name="Metal" />
     <part Name="Render" Tile="items/SelfReplicatingPigment.png" ColorString="&amp;Y" DetailColor="R" DisplayName="pigment breeder" />
     <part Name="Description" Short="Vivid liquid reeking of molten plastic gathers within the palm-sized crystal bottle. The hue of the contents gradually changes as the dial on the bottom is turned." />
     <part Name="TinkerItem" Bits="005" CanDisassemble="true" CanBuild="true" />
@@ -166,6 +168,7 @@
   </object>
 
   <object Name="MUNDANITY_CompleteCodex" Inherits="Scrap">
+    <removepart Name="Metal" />
     <part Name="Render" Tile="items/CompleteCodex.png" ColorString="&amp;K" DetailColor="Y" DisplayName="complete codex" />
     <part Name="Description" Short="Something analogous to matte black stone has been carved into a scrivener’s tablet. Its surface peaks and depresses to form glyphs when held. Words ripple across it in waves." />
     <part Name="TinkerItem" Bits="007" CanDisassemble="true" CanBuild="true" />
@@ -176,6 +179,7 @@
   </object>
 
   <object Name="MUNDANITY_StellarMemory" Inherits="Scrap">
+    <removepart Name="Metal" />
     <part Name="Render" Tile="items/StellarMemory.png" ColorString="&amp;Y" DetailColor="B" DisplayName="stellar memory" />
     <part Name="Description" Short="Suspended within a crystal wafer a documented star life repeats. In the shallows, it burns out of its gaseous cradle. By high salt sun, it has swollen with crimson age. Come jeweled dusk, its corpse eats light." />
     <part Name="TinkerItem" Bits="008" CanDisassemble="true" CanBuild="true" />
@@ -186,6 +190,7 @@
   </object>
 
   <object Name="MUNDANITY_FrozenJoy" Inherits="Scrap">
+    <removepart Name="Metal" />
     <part Name="Render" Tile="items/FrozenJoy.png" ColorString="&amp;y" DisplayName="frozen joy" />
     <part Name="Description" Short="Spherical anonymous grey somestuff. It feels good to perceive." />
     <part Name="TinkerItem" Bits="008" CanDisassemble="true" CanBuild="true" />
