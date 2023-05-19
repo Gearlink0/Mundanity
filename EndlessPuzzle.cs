@@ -4,9 +4,16 @@ using XRL.UI;
 
 namespace XRL.World.Parts
 {
-  public class MUNDANITY_EndlessPuzzle : IPart
+  public class MUNDANITY_EndlessPuzzle : IActivePart
   {
 		public int difficulty = 15;
+
+    public MUNDANITY_EndlessPuzzle()
+    {
+      this.IsBreakageSensitive = true;
+      this.IsRustSensitive = true;
+      this.WorksOnSelf = true;
+    }
 
 		public override bool WantEvent(int ID, int cascade)
     {
@@ -23,15 +30,30 @@ namespace XRL.World.Parts
 		{
 			if ( E.Command == "Mundanity_ActivateEndlessPuzzle" )
       {
-				if ( E.Actor.MakeSave("Intelligence", difficulty, Vs: "Puzzle", Source: this.ParentObject) )
-				{
-					Popup.Show("You untangle the puzzle and it retangles itself.");
-				}
-				else
-				{
-					Popup.Show("You are stumped.");
-				}
-        E.Actor.UseEnergy(1000, "Item Endless Puzzle");
+        ActivePartStatus Status = this.GetActivePartStatus();
+        switch (Status)
+        {
+          case ActivePartStatus.Broken:
+            Popup.ShowFail( this.ParentObject.Itis + " broken..." );
+            break;
+          case ActivePartStatus.Rusted:
+            Popup.ShowFail(this.ParentObject.Itis + " rusted together.");
+            break;
+          case ActivePartStatus.Operational:
+            if ( E.Actor.MakeSave("Intelligence", difficulty, Vs: "Puzzle", Source: this.ParentObject) )
+    				{
+    					Popup.Show("You untangle the puzzle and it retangles itself.");
+    				}
+    				else
+    				{
+    					Popup.Show("You are stumped.");
+    				}
+            E.Actor.UseEnergy(1000, "Item Endless Puzzle");
+            break;
+          default:
+            Popup.ShowFail("Nothing happens.");
+            break;
+        }
         E.RequestInterfaceExit();
       }
 			return base.HandleEvent(E);
