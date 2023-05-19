@@ -6,12 +6,10 @@ using XRL.UI;
 
 namespace XRL.World.Parts
 {
-	public class MUNDANITY_ReprogrammableSculpture : IPart
+	public class MUNDANITY_ReprogrammableSculpture : IPoweredPart
 	{
-		public bool SculptureActivated;
 		public string DefaultTile;
-		public string DefaultColor;
-		public string DefaultDetailColor;
+
 		public string SculptureTile;
 		[FieldSaveVersion(263)]
     public string ColorStrings = "&C,&b,&c,&B";
@@ -26,6 +24,13 @@ namespace XRL.World.Parts
     private List<string> ColorStringParts;
     [NonSerialized]
     private List<string> DetailColorParts;
+
+		public MUNDANITY_ReprogrammableSculpture()
+    {
+      this.ChargeUse = 10;
+			this.IsRustSensitive = true;
+		  this.WorksOnSelf = true;
+    }
 
 		public override bool WantEvent(int ID, int cascade)
     {
@@ -43,15 +48,41 @@ namespace XRL.World.Parts
 		{
 			if ( E.Command == "Mundanity_ActivateReprogrammableSculpture" )
       {
-				ScanObject( E.Actor );
-				UpdateSculpture( true );
-        E.Actor.UseEnergy(1000, "Item Reprogrammable Sculpture");
+				ActivePartStatus Status = this.GetActivePartStatus();
+				switch (Status)
+        {
+					case ActivePartStatus.Broken:
+		        Popup.ShowFail(this.ParentObject.Itis + " broken...");
+		        break;
+					case ActivePartStatus.Rusted:
+            Popup.ShowFail(this.ParentObject.Itis + " aperture is rusted together.");
+            break;
+	        case ActivePartStatus.Booting:
+	          Popup.ShowFail(this.ParentObject.The + this.ParentObject.ShortDisplayName + this.ParentObject.Is + " still starting up.");
+						break;
+					case ActivePartStatus.Unpowered:
+						int Charge = this.ParentObject.QueryCharge();
+						if( Charge > 0 && Charge < this.ChargeUse )
+						{
+							Popup.ShowFail(this.ParentObject.The + this.ParentObject.ShortDisplayName + this.ParentObject.GetVerb("hum") + " for a moment, then powers down. " + this.ParentObject.It + this.ParentObject.GetVerb("don't") + " have enough charge to function.");
+	            break;
+	          }
+	          Popup.ShowFail(this.ParentObject.The + this.ParentObject.ShortDisplayName + this.ParentObject.GetVerb("don't") + " have enough charge to function.");
+						break;
+					case ActivePartStatus.Operational:
+						ScanObject( E.Actor );
+						this.ConsumeCharge();
+		        E.Actor.UseEnergy(1000, "Item Reprogrammable Sculpture");
+	          break;
+					default:
+	          Popup.ShowFail("Nothing happens.");
+	          break;
+				}
         E.RequestInterfaceExit();
       }
 			if ( E.Command == "Mundanity_DeactivateReprogrammableSculpture" )
       {
 				this.SculptureTile = null;
-				UpdateSculpture( false );
         E.Actor.UseEnergy(1000, "Item Reprogrammable Sculpture");
         E.RequestInterfaceExit();
       }
@@ -97,24 +128,12 @@ namespace XRL.World.Parts
 			return true;
 		}
 
-		public void UpdateSculpture(bool newSculpture)
-		{
-			this.SculptureActivated = newSculpture;
-			if( SculptureActivated ){
-				if (!string.IsNullOrEmpty(this.SculptureTile))
-					this.ParentObject.pRender.Tile = this.SculptureTile;
-			}
-			else {
-				if (!string.IsNullOrEmpty(this.DefaultTile))
-					this.ParentObject.pRender.Tile = this.DefaultTile;
-			}
-      return;
-		}
-
 		public override bool Render(RenderEvent E)
 		{
-			if (this.SculptureActivated)
+			if ( !string.IsNullOrEmpty(this.SculptureTile) && this.GetActivePartStatus() == ActivePartStatus.Operational )
 			{
+				this.ParentObject.pRender.Tile = this.SculptureTile;
+
 				int num = (XRLCore.CurrentFrame + this.FrameOffset) % 200;
 	      if (!this.ColorStrings.IsNullOrEmpty())
 	      {
@@ -152,6 +171,8 @@ namespace XRL.World.Parts
 	        this.FrameOffset += Stat.Random(0, 20);
 	      return true;
 			}
+			else
+				this.ParentObject.pRender.Tile = this.DefaultTile;
 			return true;
 		}
 	}

@@ -154,7 +154,8 @@
     <part Name="TinkerItem" Bits="006" CanDisassemble="true" CanBuild="true" />
     <part Name="Examiner" Complexity="6" />
     <part Name="Commerce" Value="98" />
-    <part Name="MUNDANITY_ReprogrammableSculpture" DefaultTile="items/ReprogrammableSculpture.png" DefaultColor="&amp;b" DefaultDetailColor="y"/>
+    <part Name="MUNDANITY_ReprogrammableSculpture" DefaultTile="items/ReprogrammableSculpture.png" />
+    <part Name="EnergyCellSocket" SlotType="EnergyCell" ChanceSlotted="0" />
     <tag Name="NoDataDisk" />
   </object>
 
