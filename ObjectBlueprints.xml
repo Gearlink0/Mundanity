@@ -176,6 +176,8 @@
     <part Name="Examiner" Complexity="7" />
     <part Name="Commerce" Value="113" />
     <part Name="MUNDANITY_CompleteCodex" />
+    <part Name="ZeroPointEnergyCollector" ChargeRate="10" World="JoppaWorld,OrbWorld" />
+    <part Name="Circuitry" />
     <tag Name="NoDataDisk" />
   </object>
 
