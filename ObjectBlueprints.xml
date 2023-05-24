@@ -99,13 +99,17 @@
   <object Name="MUNDANITY_LaserScaper" Inherits="Scrap">
     <part Name="Render" Tile="items/LaserScaper.png" ColorString="&amp;K" DetailColor="c" DisplayName="laser scaper" />
     <part Name="MissileWeapon" Skill="Pistol" AmmoChar="&amp;C&#15;" ShotsPerAction="1" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="0" />
-    <part Name="EnergyAmmoLoader" ChargeUse="0" ProjectileObject="MUNDANITY_ProjectileLaserScaper" />
+    <part Name="EnergyAmmoLoader" ChargeUse="10" ProjectileObject="MUNDANITY_ProjectileMeasuringLaser" />
+    <part Name="EnergyCellSocket" SlotType="EnergyCell" ChanceSlotted="0" />
+    <part Name="MUNDANITY_MeasureOnHit" Metric="distance" />
     <part Name="Description" Short="In desperation, the cornered arconaut fired the strange laser pistol. It reported to them the exact geometric properties of the charging rhinox." />
     <part Name="TinkerItem" Bits="004" CanDisassemble="true" CanBuild="true" />
-    <part Name="Examiner" Complexity="4" />
+    <part Name="Examiner" Alternate="UnknownPistol" Complexity="4" />
     <part Name="Commerce" Value="68" />
+    <part Name="Physics" Weight="2" Category="Missile Weapon" />
     <tag Name="NoDataDisk" />
     <tag Name="MissileFireSound" Value="pistol_laser" />
+    <tag Name="MissileWeapon" Value="1" />
   </object>
 
   <object Name="MUNDANITY_AroMatic" Inherits="Scrap">
@@ -139,13 +143,17 @@
   <object Name="MUNDANITY_LaserScale" Inherits="Scrap">
     <part Name="Render" Tile="items/LaserScaper.png" ColorString="&amp;y" DetailColor="c" DisplayName="laser scale" />
     <part Name="MissileWeapon" Skill="Pistol" AmmoChar="&amp;C&#15;" ShotsPerAction="1" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="0" />
-    <part Name="EnergyAmmoLoader" ChargeUse="0" ProjectileObject="MUNDANITY_ProjectileLaserScale" />
+    <part Name="EnergyAmmoLoader" ChargeUse="10" ProjectileObject="MUNDANITY_ProjectileMeasuringLaser" />
+    <part Name="EnergyCellSocket" SlotType="EnergyCell" ChanceSlotted="0" />
+    <part Name="MUNDANITY_MeasureOnHit" Metric="weight" />
     <part Name="Description" Short="Now panicked, the arconaut tried the second bizarre laser pistol and learned the weight of the charging rhinox." />
     <part Name="TinkerItem" Bits="006" CanDisassemble="true" CanBuild="true" />
-    <part Name="Examiner" Complexity="6" />
+    <part Name="Examiner" Alternate="UnknownPistol" Complexity="6" />
     <part Name="Commerce" Value="98" />
+    <part Name="Physics" Weight="2" Category="Missile Weapon" />
     <tag Name="NoDataDisk" />
     <tag Name="MissileFireSound" Value="pistol_laser" />
+    <tag Name="MissileWeapon" Value="1" />
   </object>
 
   <object Name="MUNDANITY_ReprogrammableSculpture" Inherits="Scrap">
@@ -203,19 +211,10 @@
     <tag Name="NoDataDisk" />
   </object>
 
-  <object Name="MUNDANITY_ProjectileLaserScaper" Inherits="TemporaryEnergyProjectile">
+  <object Name="MUNDANITY_ProjectileMeasuringLaser" Inherits="TemporaryEnergyProjectile">
     <part Name="Render" DisplayName="{{C|laser beam}}" ColorString="&amp;C" />
     <part Name="Projectile" BasePenetration="0" BaseDamage="0" Attributes="Light Laser" ColorString="&amp;C" PassByVerb="streak" />
     <part Name="TreatAsSolid" LightBased="true" Hits="false" RequiresPhaseMatch="false" Message="The darkness consumes =subject.t=!" />
-    <part Name="MUNDANITY_MeasureOnHit" Metric="distance" />
-    <tag Name="Light" />
-  </object>
-
-  <object Name="MUNDANITY_ProjectileLaserScale" Inherits="TemporaryEnergyProjectile">
-    <part Name="Render" DisplayName="{{C|laser beam}}" ColorString="&amp;C" />
-    <part Name="Projectile" BasePenetration="0" BaseDamage="0" Attributes="Light Laser" ColorString="&amp;C" PassByVerb="streak" />
-    <part Name="TreatAsSolid" LightBased="true" Hits="false" RequiresPhaseMatch="false" Message="The darkness consumes =subject.t=!" />
-    <part Name="MUNDANITY_MeasureOnHit" Metric="weight" />
     <tag Name="Light" />
   </object>
 </objects>

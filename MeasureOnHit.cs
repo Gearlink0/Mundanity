@@ -12,20 +12,16 @@ namespace XRL.World.Parts
 
 		public override void Register(GameObject Object)
     {
-      Object.RegisterPartEvent((IPart) this, "AttackerHit");
-      Object.RegisterPartEvent((IPart) this, "ProjectileHit");
-      Object.RegisterPartEvent((IPart) this, "WeaponHit");
-      Object.RegisterPartEvent((IPart) this, "WeaponThrowHit");
+			Object.RegisterPartEvent((IPart) this, "WeaponMissileWeaponHit");
       base.Register(Object);
     }
 
 		public override bool FireEvent(Event E)
     {
-      if (E.ID == "ProjectileHit" || E.ID == "WeaponHit" || E.ID == "AttackerHit" || E.ID == "WeaponThrowHit")
+			if (E.ID == "WeaponMissileWeaponHit")
 			{
 				GameObject Attacker = E.GetGameObjectParameter("Attacker");
       	GameObject Defender = E.GetGameObjectParameter("Defender");
-      	GameObject Projectile = E.GetGameObjectParameter("Projectile");
 				this.Measure(Attacker, Defender);
 			}
       return base.FireEvent(E);
