@@ -32,6 +32,12 @@ namespace XRL.World.Parts
 		  this.WorksOnSelf = true;
     }
 
+		public override bool SameAs(IPart p)
+    {
+      MUNDANITY_ReprogrammableSculpture That = p as MUNDANITY_ReprogrammableSculpture;
+      return !(That.DefaultTile != this.DefaultTile) && !(That.SculptureTile != this.SculptureTile) && base.SameAs(p);
+    }
+
 		public override bool WantEvent(int ID, int cascade)
     {
       return base.WantEvent(ID, cascade) || ID == GetInventoryActionsEvent.ID || ID == InventoryActionEvent.ID;
@@ -57,9 +63,6 @@ namespace XRL.World.Parts
 					case ActivePartStatus.Rusted:
             Popup.ShowFail(this.ParentObject.Itis + " aperture is rusted together.");
             break;
-	        case ActivePartStatus.Booting:
-	          Popup.ShowFail(this.ParentObject.The + this.ParentObject.ShortDisplayName + this.ParentObject.Is + " still starting up.");
-						break;
 					case ActivePartStatus.Unpowered:
 						int Charge = this.ParentObject.QueryCharge();
 						if( Charge > 0 && Charge < this.ChargeUse )
