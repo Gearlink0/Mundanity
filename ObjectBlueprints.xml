@@ -128,6 +128,7 @@
     <part Name="TinkerItem" Bits="005" CanDisassemble="true" CanBuild="true" />
     <part Name="Examiner" Complexity="5" />
     <part Name="Commerce" Value="83" />
+    <part Name="MUNDANITY_NonNanoCrayons" />
     <tag Name="NoDataDisk" />
   </object>
 
