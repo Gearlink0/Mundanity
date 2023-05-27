@@ -9,17 +9,22 @@ using XRL.UI;
 
 namespace XRL.World.Parts
 {
+  [Serializable]
   public class MUNDANITY_MoodLenses : IPart
   {
-    int Radius = 40;
-
-    string Color = "b";
-    string Detail = "B";
-    string Background = "k";
+    public string Color = "b";
+    public string Detail = "B";
+    public string Background = "k";
 
     public void Initialize()
     {
       XRLCore.RegisterAfterRenderCallback(new Action<XRLCore, ScreenBuffer>(this.AfterRender));
+    }
+
+    public override bool SameAs(IPart p)
+    {
+      MUNDANITY_MoodLenses That = p as MUNDANITY_MoodLenses;
+      return !(That.Color != this.Color) && !(That.Detail != this.Detail) && !(That.Background != this.Background) && base.SameAs(p);
     }
 
 		public override bool WantEvent(int ID, int cascade)
@@ -80,13 +85,13 @@ namespace XRL.World.Parts
 
     private void AfterRender(XRLCore core, ScreenBuffer sb)
     {
-      GameObject Player = XRLCore.Core?.Game?.Player?.Body;
+      GameObject Player = The.Player;
       if (Player == null )
         return;
 
       string MoodLensesSettings = Player.GetStringProperty( "MUNDANITY_MoodLensesSettings" );
 
-      if ( MoodLensesSettings.Length > 0 )
+      if ( MoodLensesSettings.Length > 0 && !Keyboard.bAlt && !Player.HasEffect("Skulk_Tonic") && !Options.DisableFullscreenColorEffects )
       {
         for(int row = 0; row < sb.Width; row++)
         {
