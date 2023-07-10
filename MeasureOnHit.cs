@@ -49,7 +49,7 @@ namespace XRL.World.Parts
 				}
 				else
 				{
-					Message.Append("some measurements you cannoy make sense of.");
+					Message.Append("some measurements you cannot make sense of.");
 				}
 				XRL.Messages.MessageQueue.AddPlayerMessage(Message.ToString());
 				return true;
