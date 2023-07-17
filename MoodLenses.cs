@@ -1,9 +1,7 @@
-using ConsoleLib.Console;
 using System;
 using System.Text;
 using System.Collections.Generic;
 using XRL;
-using XRL.Core;
 using XRL.Language;
 using XRL.UI;
 
@@ -15,11 +13,6 @@ namespace XRL.World.Parts
     public string Color = "b";
     public string Detail = "B";
     public string Background = "k";
-
-    public void Initialize()
-    {
-      XRLCore.RegisterAfterRenderCallback(new Action<XRLCore, ScreenBuffer>(this.AfterRender));
-    }
 
     public override bool SameAs(IPart p)
     {
@@ -46,7 +39,7 @@ namespace XRL.World.Parts
         this.Detail = Popup.ShowColorPicker("Choose a secondary color.", includeNone: false);
         this.Background = Popup.ShowColorPicker("Choose a background color.", includeNone: false);
         GameObject Equipper = this.ParentObject.Equipped;
-        if ( Equipper != null && this.ParentObject.Equipped.IsPlayer() )
+        if ( Equipper != null )
         {
           StringBuilder StringBuilder = new StringBuilder();
           StringBuilder.Append(this.Color);
@@ -62,47 +55,18 @@ namespace XRL.World.Parts
 
     public override bool HandleEvent(EquippedEvent E)
     {
-      if( E.Actor.IsPlayer() )
-        XRLCore.RegisterAfterRenderCallback(new Action<XRLCore, ScreenBuffer>(this.AfterRender));
-
-        StringBuilder StringBuilder = new StringBuilder();
-        StringBuilder.Append(this.Color);
-        StringBuilder.Append(this.Detail);
-        StringBuilder.Append(this.Background);
-        if ( E.Actor.IsPlayer() )
-        {
-          E.Actor.SetStringProperty( "MUNDANITY_MoodLensesSettings", StringBuilder.ToString() );
-        }
+      StringBuilder StringBuilder = new StringBuilder();
+      StringBuilder.Append(this.Color);
+      StringBuilder.Append(this.Detail);
+      StringBuilder.Append(this.Background);
+      E.Actor.SetStringProperty( "MUNDANITY_MoodLensesSettings", StringBuilder.ToString() );
       return base.HandleEvent(E);
     }
 
     public override bool HandleEvent(UnequippedEvent E)
     {
-      if( E.Actor.IsPlayer() )
-        E.Actor.SetStringProperty( "MUNDANITY_MoodLensesSettings", "" );
+      E.Actor.SetStringProperty( "MUNDANITY_MoodLensesSettings", "" );
       return base.HandleEvent(E);
-    }
-
-    private void AfterRender(XRLCore core, ScreenBuffer sb)
-    {
-      GameObject Player = The.Player;
-      if (Player == null )
-        return;
-
-      string MoodLensesSettings = Player.GetStringProperty( "MUNDANITY_MoodLensesSettings" );
-
-      if ( MoodLensesSettings.Length > 0 && !Keyboard.bAlt && !Player.HasEffect("Skulk_Tonic") && !Options.DisableFullscreenColorEffects )
-      {
-        for(int row = 0; row < sb.Width; row++)
-        {
-          for(int col = 0; col< sb.Height; col++)
-          {
-            sb[row, col].SetForeground(MoodLensesSettings[0]);
-            sb[row, col].SetDetail(MoodLensesSettings[1]);
-            sb[row, col].SetBackground(MoodLensesSettings[2]);
-          }
-        }
-      }
     }
 	}
 }
