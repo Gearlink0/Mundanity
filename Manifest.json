@@ -1,0 +1,10 @@
+{
+	"id": "Mundanity",
+	"loadorder": 1,
+	"title": "Mundanity",
+	"description": "The Eaters built many great and terrible things, but not all of them are immediately useful to a glory hungry cave-delver.\n\nAdds artifacts of mundane, domestic life to the game as scrap.",
+	"tags": "Tinkering,Lore",
+	"version": "1.0",
+	"author": "Gearlink",
+	"previewImage": "preview.png"
+}
