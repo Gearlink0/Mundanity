@@ -217,5 +217,7 @@
     <part Name="Projectile" BasePenetration="0" BaseDamage="0" Attributes="Light Laser" ColorString="&amp;C" PassByVerb="streak" />
     <part Name="TreatAsSolid" LightBased="true" Hits="false" RequiresPhaseMatch="false" Message="The darkness consumes =subject.t=!" />
     <tag Name="Light" />
+    <tag Name="ProjectileVFX" Value="MissileWeaponsEffects/small_laser" />
+    <tag Name="ProjectileVFXConfiguration" Value="duration::0.25;;beamColor0::#FF8000" />
   </object>
 </objects>
