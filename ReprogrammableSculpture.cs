@@ -95,7 +95,7 @@ namespace XRL.World.Parts
 		public bool ScanObject( GameObject Actor = null )
 		{
 			GameObject ScanTarget = null;
-			int chosenOption = Popup.ShowOptionList(
+			int chosenOption = Popup.PickOption(
 				Options: new string[2] {
 					"Scan something in your inventory.",
 					"Scan something nearby."
@@ -127,7 +127,7 @@ namespace XRL.World.Parts
 
 			if (ScanTarget == null)
 				return false;
-			this.SculptureTile = ScanTarget.pRender.Tile;
+			this.SculptureTile = ScanTarget.Render.Tile;
 			return true;
 		}
 
@@ -135,7 +135,7 @@ namespace XRL.World.Parts
 		{
 			if ( !string.IsNullOrEmpty(this.SculptureTile) && this.GetActivePartStatus() == ActivePartStatus.Operational )
 			{
-				this.ParentObject.pRender.Tile = this.SculptureTile;
+				this.ParentObject.Render.Tile = this.SculptureTile;
 
 				int num = (XRLCore.CurrentFrame + this.FrameOffset) % 200;
 	      if (!this.ColorStrings.IsNullOrEmpty())
@@ -175,7 +175,7 @@ namespace XRL.World.Parts
 	      return true;
 			}
 			else
-				this.ParentObject.pRender.Tile = this.DefaultTile;
+				this.ParentObject.Render.Tile = this.DefaultTile;
 			return true;
 		}
 	}
