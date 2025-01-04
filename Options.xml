@@ -1,0 +1,8 @@
+<options>
+	<option ID="MUNDANITY_TreatMundanityItemsAsScrap" DisplayText="Automatically treat the items added by the mod as scrap" Category="Mundanity" Type="Checkbox" Default="No">
+		<helptext>
+				When Disassemble is learned, the items this mod adds will all be treated
+				as scrap.
+    </helptext>
+	</option>
+</options>

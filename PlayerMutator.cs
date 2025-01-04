@@ -4,6 +4,7 @@ using XRL;
 using XRL.Core;
 using XRL.UI;
 using XRL.World;
+using XRL.World.Parts;
 
 [PlayerMutator]
 [HasCallAfterGameLoadedAttribute]
@@ -12,6 +13,7 @@ public class MUNDANITY_AddMoodLensesCallbackToPlayer : IPlayerMutator
 	public void mutate(GameObject player)
 	{
 		XRLCore.RegisterAfterRenderCallback(new Action<XRLCore, ScreenBuffer>(AfterRender));
+		player.AddPart<MUNDANITY_TreatItemsAsScrapSystem>();
 	}
 
 	[CallAfterGameLoadedAttribute]
