@@ -1,19 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <objects>
-  <object Name="MUNDANITY_CulinaryCyst" Inherits="Scrap">
+
+  <object Name="MUNDANITY_BaseMundaneTrinket" Inherits="Trinket">
+    <part Name="Physics" Weight="2" />
+    <part Name="TinkerItem" CanDisassemble="true" CanBuild="true" />
+    <part Name="Metal" />
+  </object>
+
+  <object Name="MUNDANITY_CulinaryCyst" Inherits="MUNDANITY_BaseMundaneTrinket">
     <part Name="Render" Tile="items/CulinaryCyst.png" ColorString="&amp;Y" DetailColor="Y" DisplayName="culinary cyst" />
     <part Name="Description" Short="Layered aluminum foil forms a pouch attached to the power zipper. With tender patience it cooks its contents." />
-    <part Name="TinkerItem" Bits="0R" CanDisassemble="true" CanBuild="true" />
+    <part Name="TinkerItem" Bits="0R" />
     <part Name="Examiner" Complexity="1" />
     <part Name="Commerce" Value="15" />
     <tag Name="NoDataDisk" />
   </object>
 
-  <object Name="MUNDANITY_MoodLenses" Inherits="Scrap">
+  <object Name="MUNDANITY_MoodLenses" Inherits="MUNDANITY_BaseMundaneTrinket">
     <removepart Name="Metal" />
     <part Name="Render" Tile="items/MoodLenses.png" ColorString="&amp;y" DetailColor="Y" DisplayName="mood lenses" />
     <part Name="Description" Short="Ghostly plastic caps for the eyes tint and bend light to paint the world in accordance with the desired disposition." />
-    <part Name="TinkerItem" Bits="0G" CanDisassemble="true" CanBuild="true" />
+    <part Name="TinkerItem" Bits="0G" />
     <part Name="Examiner" Complexity="1" />
     <part Name="Commerce" Value="15" />
     <part Name="Armor" WornOn="Face" />
@@ -21,89 +28,89 @@
     <tag Name="NoDataDisk" />
   </object>
 
-  <object Name="MUNDANITY_ScouringGel" Inherits="Scrap">
+  <object Name="MUNDANITY_ScouringGel" Inherits="MUNDANITY_BaseMundaneTrinket">
     <part Name="Render" Tile="items/ScouringGel.png" ColorString="&amp;y" DetailColor="G" DisplayName="scouring gel" />
     <part Name="Description" Short="Neon green gelatin jiggles behind the glass window of the aluminum canister." />
-    <part Name="TinkerItem" Bits="0B" CanDisassemble="true" CanBuild="true" />
+    <part Name="TinkerItem" Bits="0B" />
     <part Name="Examiner" Complexity="1" />
     <part Name="Commerce" Value="15" />
     <part Name="MUNDANITY_Cleaner"/>
     <tag Name="NoDataDisk" />
   </object>
 
-  <object Name="MUNDANITY_UniversalInterfaceCable" Inherits="Scrap">
+  <object Name="MUNDANITY_UniversalInterfaceCable" Inherits="MUNDANITY_BaseMundaneTrinket">
     <part Name="Render" Tile="items/UniversalInterfaceCable.png" ColorString="&amp;K" DetailColor="W" DisplayName="universal link" />
     <part Name="Description" Short="Flexible black plastic sheathes the bundle of wires and filaments. Both ends terminate in copper geometries alien to all familiar slots." />
-    <part Name="TinkerItem" Bits="0C" CanDisassemble="true" CanBuild="true" />
+    <part Name="TinkerItem" Bits="0C" />
     <part Name="Examiner" Complexity="1" />
     <part Name="Commerce" Value="15" />
     <tag Name="NoDataDisk" />
   </object>
 
-  <object Name="MUNDANITY_MotorizedSponge" Inherits="Scrap">
+  <object Name="MUNDANITY_MotorizedSponge" Inherits="MUNDANITY_BaseMundaneTrinket">
     <part Name="Render" Tile="items/MotorizedSponge.png" ColorString="&amp;W" DetailColor="y" DisplayName="motorized sponge" />
     <part Name="Description" Short="When released, the porous mass tumbles forward of its own volition, picking up detritus and grime as it trundles along. It attempts to wiggle around the obstacles it inevitably collides with." />
-    <part Name="TinkerItem" Bits="001" CanDisassemble="true" CanBuild="true" />
+    <part Name="TinkerItem" Bits="001" />
     <part Name="Examiner" Complexity="1" />
     <part Name="Commerce" Value="23" />
     <part Name="MUNDANITY_Cleaner"/>
     <tag Name="NoDataDisk" />
   </object>
 
-  <object Name="MUNDANITY_EtchingStylus" Inherits="Scrap">
+  <object Name="MUNDANITY_EtchingStylus" Inherits="MUNDANITY_BaseMundaneTrinket">
     <part Name="Render" Tile="items/EtchingStylus.png" ColorString="&amp;K" DetailColor="Y" DisplayName="etching stylus" />
     <part Name="Description" Short="Steel forms the needle tip of the plastic pen. Sparks fly when touched to metal and cut a precise indent." />
-    <part Name="TinkerItem" Bits="001" CanDisassemble="true" CanBuild="true" />
+    <part Name="TinkerItem" Bits="001" />
     <part Name="Examiner" Complexity="1" />
     <part Name="Commerce" Value="23" />
     <tag Name="NoDataDisk" />
   </object>
 
-  <object Name="MUNDANITY_Orbsinger" Inherits="Scrap">
+  <object Name="MUNDANITY_Orbsinger" Inherits="MUNDANITY_BaseMundaneTrinket">
     <part Name="Render" Tile="items/Orbsinger.png" ColorString="&amp;c" DetailColor="Y" DisplayName="orbsinger" />
     <part Name="Description" Short="Speaker slots rib the plastic disk. A mirrored marble is held in a glass dome on the top. The sphere rolls freely as the disk is moved and the device milks music from its erratic motions." />
-    <part Name="TinkerItem" Bits="002" CanDisassemble="true" CanBuild="true" />
+    <part Name="TinkerItem" Bits="002" />
     <part Name="Examiner" Complexity="2" />
     <part Name="Commerce" Value="38" />
     <tag Name="NoDataDisk" />
   </object>
 
-  <object Name="MUNDANITY_StasisTorque" Inherits="Scrap">
+  <object Name="MUNDANITY_StasisTorque" Inherits="MUNDANITY_BaseMundaneTrinket">
     <part Name="Render" Tile="items/StasisTorque.png" ColorString="&amp;W" DetailColor="M" DisplayName="stasis torque" />
     <part Name="Description" Short="Unseen hands extend from the jewelry to hold aloft the wearer’s strucutrally limp extremities in gravity-spurning sculpture." />
-    <part Name="TinkerItem" Bits="002" CanDisassemble="true" CanBuild="true" />
+    <part Name="TinkerItem" Bits="002" />
     <part Name="Examiner" Complexity="2" />
     <part Name="Commerce" Value="38" />
     <tag Name="NoDataDisk" />
   </object>
 
-  <object Name="MUNDANITY_ModularInstrument" Inherits="Scrap">
+  <object Name="MUNDANITY_ModularInstrument" Inherits="MUNDANITY_BaseMundaneTrinket">
     <part Name="Render" Tile="items/ModularInstrument.png" ColorString="&amp;O" DetailColor="W" DisplayName="modular instrument" />
     <part Name="Description" Short="Mouthpieces, tubes, valves, levers, bells, and mutes of shining brass separate and recombine into countless configurations to provide all variations of pitch and timbre." />
-    <part Name="TinkerItem" Bits="003" CanDisassemble="true" CanBuild="true" />
+    <part Name="TinkerItem" Bits="003" />
     <part Name="Examiner" Complexity="3" />
     <part Name="Commerce" Value="52" />
     <tag Name="NoDataDisk" />
   </object>
 
-  <object Name="MUNDANITY_EndlessPuzzle" Inherits="Scrap">
+  <object Name="MUNDANITY_EndlessPuzzle" Inherits="MUNDANITY_BaseMundaneTrinket">
     <part Name="Render" Tile="items/EndlessPuzzle.png" ColorString="&amp;y" DetailColor="Y" DisplayName="endless puzzle" />
     <part Name="Description" Short="Metal shapes tangle in a bewildering embrace. When spatial reasoning at last separates them, they quiver, leap, and writhe into a new configuration." />
-    <part Name="TinkerItem" Bits="003" CanDisassemble="true" CanBuild="true" />
+    <part Name="TinkerItem" Bits="003" />
     <part Name="Examiner" Complexity="3" />
     <part Name="Commerce" Value="52" />
     <part Name="MUNDANITY_EndlessPuzzle" />
     <tag Name="NoDataDisk" />
   </object>
 
-  <object Name="MUNDANITY_LaserScaper" Inherits="Scrap">
+  <object Name="MUNDANITY_LaserScaper" Inherits="MUNDANITY_BaseMundaneTrinket">
     <part Name="Render" Tile="items/LaserScaper.png" ColorString="&amp;K" DetailColor="c" DisplayName="laser scaper" />
     <part Name="MissileWeapon" Skill="Pistol" AmmoChar="&amp;C&#15;" ShotsPerAction="1" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="0" />
     <part Name="EnergyAmmoLoader" ChargeUse="10" ProjectileObject="MUNDANITY_ProjectileMeasuringLaser" />
     <part Name="EnergyCellSocket" SlotType="EnergyCell" ChanceSlotted="0" />
     <part Name="MUNDANITY_MeasureOnHit" Metric="distance" />
     <part Name="Description" Short="In desperation, the cornered arconaut fired the strange laser pistol. It reported to them the exact geometric properties of the charging rhinox." />
-    <part Name="TinkerItem" Bits="004" CanDisassemble="true" CanBuild="true" />
+    <part Name="TinkerItem" Bits="004" />
     <part Name="Examiner" Alternate="UnknownPistol" Complexity="4" />
     <part Name="Commerce" Value="68" />
     <part Name="Physics" Weight="2" Category="Missile Weapon" />
@@ -112,43 +119,43 @@
     <tag Name="MissileWeapon" Value="1" />
   </object>
 
-  <object Name="MUNDANITY_AroMatic" Inherits="Scrap">
+  <object Name="MUNDANITY_AroMatic" Inherits="MUNDANITY_BaseMundaneTrinket">
     <part Name="Render" Tile="items/AroMatic.png" ColorString="&amp;y" DetailColor="Y" DisplayName="aro-matic" />
     <part Name="Description" Short="Porous leaves of sterile white steel unfurl to sift the air. Within the plastic root ball, offending molecules are reassembled into more olfactorily pleasing configurations." />
-    <part Name="TinkerItem" Bits="004" CanDisassemble="true" CanBuild="true" />
+    <part Name="TinkerItem" Bits="004" />
     <part Name="Examiner" Complexity="4" />
     <part Name="Commerce" Value="68" />
     <tag Name="NoDataDisk" />
   </object>
 
-  <object Name="MUNDANITY_SelfReplicatingPigment" Inherits="Scrap">
+  <object Name="MUNDANITY_SelfReplicatingPigment" Inherits="MUNDANITY_BaseMundaneTrinket">
     <removepart Name="Metal" />
     <part Name="Render" Tile="items/SelfReplicatingPigment.png" ColorString="&amp;Y" DetailColor="R" DisplayName="pigment breeder" />
     <part Name="Description" Short="Vivid liquid reeking of molten plastic gathers within the palm-sized crystal bottle. The hue of the contents gradually changes as the dial on the bottom is turned." />
-    <part Name="TinkerItem" Bits="005" CanDisassemble="true" CanBuild="true" />
+    <part Name="TinkerItem" Bits="005" />
     <part Name="Examiner" Complexity="5" />
     <part Name="Commerce" Value="83" />
     <part Name="MUNDANITY_NonNanoCrayons" />
     <tag Name="NoDataDisk" />
   </object>
 
-  <object Name="MUNDANITY_RelaxationSand" Inherits="Scrap">
+  <object Name="MUNDANITY_RelaxationSand" Inherits="MUNDANITY_BaseMundaneTrinket">
     <part Name="Render" Tile="items/RelaxationSand.png" ColorString="&amp;K" DetailColor="y" DisplayName="relaxation sand" />
     <part Name="Description" Short="Introduce through any desired orifice. Swarm will permeate the body, travel to concentrations of stress chemicals, and bond with chemicals for removal. Swarm will then be excreted. Wash before reuse." />
-    <part Name="TinkerItem" Bits="005" CanDisassemble="true" CanBuild="true" />
+    <part Name="TinkerItem" Bits="005" />
     <part Name="Examiner" Complexity="5" />
     <part Name="Commerce" Value="83" />
     <tag Name="NoDataDisk" />
   </object>
 
-  <object Name="MUNDANITY_LaserScale" Inherits="Scrap">
+  <object Name="MUNDANITY_LaserScale" Inherits="MUNDANITY_BaseMundaneTrinket">
     <part Name="Render" Tile="items/LaserScaper.png" ColorString="&amp;y" DetailColor="c" DisplayName="laser scale" />
     <part Name="MissileWeapon" Skill="Pistol" AmmoChar="&amp;C&#15;" ShotsPerAction="1" AmmoPerAction="1" ShotsPerAnimation="1" WeaponAccuracy="0" />
     <part Name="EnergyAmmoLoader" ChargeUse="10" ProjectileObject="MUNDANITY_ProjectileMeasuringLaser" />
     <part Name="EnergyCellSocket" SlotType="EnergyCell" ChanceSlotted="0" />
     <part Name="MUNDANITY_MeasureOnHit" Metric="weight" />
     <part Name="Description" Short="Now panicked, the arconaut tried the second bizarre laser pistol and learned the weight of the charging rhinox." />
-    <part Name="TinkerItem" Bits="006" CanDisassemble="true" CanBuild="true" />
+    <part Name="TinkerItem" Bits="006" />
     <part Name="Examiner" Alternate="UnknownPistol" Complexity="6" />
     <part Name="Commerce" Value="98" />
     <part Name="Physics" Weight="2" Category="Missile Weapon" />
@@ -157,10 +164,10 @@
     <tag Name="MissileWeapon" Value="1" />
   </object>
 
-  <object Name="MUNDANITY_ReprogrammableSculpture" Inherits="Scrap">
+  <object Name="MUNDANITY_ReprogrammableSculpture" Inherits="MUNDANITY_BaseMundaneTrinket">
     <part Name="Render" Tile="items/ReprogrammableSculpture.png" ColorString="&amp;b" DetailColor="y" DisplayName="portable sculpture" />
     <part Name="Description" Short="Photon herding coils wrap a glassy lens and plastic visor. When shut, lasers carve a vision of the last thing shown to the little sculptor." />
-    <part Name="TinkerItem" Bits="006" CanDisassemble="true" CanBuild="true" />
+    <part Name="TinkerItem" Bits="006" />
     <part Name="Examiner" Complexity="6" />
     <part Name="Commerce" Value="98" />
     <part Name="MUNDANITY_ReprogrammableSculpture" DefaultTile="items/ReprogrammableSculpture.png" />
@@ -168,20 +175,20 @@
     <tag Name="NoDataDisk" />
   </object>
 
-  <object Name="MUNDANITY_OralImplement" Inherits="Scrap">
+  <object Name="MUNDANITY_OralImplement" Inherits="MUNDANITY_BaseMundaneTrinket">
     <part Name="Render" Tile="items/OralImplement.png" ColorString="&amp;b" DetailColor="B" DisplayName="oral implement" />
     <part Name="Description" Short="Bright and sharp carbide unfurls from a wand into a forest of minute manipulators. “Place me within your consumptive orifice,” the device requests in shrill distortion. “For medical and aesthetic optimization.”" />
-    <part Name="TinkerItem" Bits="007" CanDisassemble="true" CanBuild="true" />
+    <part Name="TinkerItem" Bits="007" />
     <part Name="Examiner" Complexity="7" />
     <part Name="Commerce" Value="113" />
     <tag Name="NoDataDisk" />
   </object>
 
-  <object Name="MUNDANITY_CompleteCodex" Inherits="Scrap">
+  <object Name="MUNDANITY_CompleteCodex" Inherits="MUNDANITY_BaseMundaneTrinket">
     <removepart Name="Metal" />
     <part Name="Render" Tile="items/CompleteCodex.png" ColorString="&amp;K" DetailColor="Y" DisplayName="complete codex" />
     <part Name="Description" Short="Something analogous to matte black stone has been carved into a scrivener’s tablet. Its surface peaks and depresses to form glyphs when held. Words ripple across it in waves." />
-    <part Name="TinkerItem" Bits="007" CanDisassemble="true" CanBuild="true" />
+    <part Name="TinkerItem" Bits="007" />
     <part Name="Examiner" Complexity="7" />
     <part Name="Commerce" Value="113" />
     <part Name="MUNDANITY_CompleteCodex" />
@@ -190,22 +197,22 @@
     <tag Name="NoDataDisk" />
   </object>
 
-  <object Name="MUNDANITY_StellarMemory" Inherits="Scrap">
+  <object Name="MUNDANITY_StellarMemory" Inherits="MUNDANITY_BaseMundaneTrinket">
     <removepart Name="Metal" />
     <part Name="Render" Tile="items/StellarMemory.png" ColorString="&amp;Y" DetailColor="B" DisplayName="stellar memory" />
     <part Name="Description" Short="Suspended within a crystal wafer a documented star life repeats. In the shallows, it burns out of its gaseous cradle. By high salt sun, it has swollen with crimson age. Come jeweled dusk, its corpse eats light." />
-    <part Name="TinkerItem" Bits="008" CanDisassemble="true" CanBuild="true" />
+    <part Name="TinkerItem" Bits="008" />
     <part Name="Examiner" Complexity="8" />
     <part Name="Commerce" Value="128" />
     <part Name="MUNDANITY_RealityDistortionDescription" StabilizedDescription="A clear crystal wafer."/>
     <tag Name="NoDataDisk" />
   </object>
 
-  <object Name="MUNDANITY_FrozenJoy" Inherits="Scrap">
+  <object Name="MUNDANITY_FrozenJoy" Inherits="MUNDANITY_BaseMundaneTrinket">
     <removepart Name="Metal" />
     <part Name="Render" Tile="items/FrozenJoy.png" ColorString="&amp;y" DisplayName="frozen joy" />
     <part Name="Description" Short="Spherical anonymous grey somestuff. It feels good to perceive." />
-    <part Name="TinkerItem" Bits="008" CanDisassemble="true" CanBuild="true" />
+    <part Name="TinkerItem" Bits="008" />
     <part Name="Examiner" Complexity="8" />
     <part Name="Commerce" Value="128" />
     <part Name="MUNDANITY_RealityDistortionDescription" StabilizedDescription="An anonymous grey sphere."/>
