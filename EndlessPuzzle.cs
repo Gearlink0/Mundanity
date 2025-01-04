@@ -42,7 +42,7 @@ namespace XRL.World.Parts
           case ActivePartStatus.Operational:
             if ( E.Actor.MakeSave("Intelligence", difficulty, Vs: "Puzzle", Source: this.ParentObject) )
     				{
-    					Popup.Show("You untangle the puzzle and it retangles itself.");
+    					Popup.Show("You solve the puzzle and it retangles itself.");
     				}
     				else
     				{
@@ -54,7 +54,6 @@ namespace XRL.World.Parts
             Popup.ShowFail("Nothing happens.");
             break;
         }
-        E.RequestInterfaceExit();
       }
 			return base.HandleEvent(E);
 		}
