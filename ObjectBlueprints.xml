@@ -63,6 +63,8 @@
     <part Name="TinkerItem" Bits="001" />
     <part Name="Examiner" Complexity="1" />
     <part Name="Commerce" Value="23" />
+    <part Name="EnergyCellSocket" SlotType="EnergyCell" ChanceSlotted="0" />
+    <part Name="Engraver" />
     <tag Name="NoDataDisk" />
   </object>
 
