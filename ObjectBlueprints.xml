@@ -54,6 +54,9 @@
     <part Name="Examiner" Complexity="1" />
     <part Name="Commerce" Value="23" />
     <part Name="MUNDANITY_Cleaner"/>
+    <part Name="MUNDANITY_Sponger" />
+    <part Name="Physics" FlameTemperature="350" />
+    <removepart Name="Metal" />
     <tag Name="NoDataDisk" />
   </object>
 
