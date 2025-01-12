@@ -67,7 +67,7 @@ namespace XRL.World.Parts
               Initial: true,
               Poured: true,
               PouredBy: this.ParentObject,
-              ContactVolume: (maxVolume - existingVolume)
+              ContactVolume: Math.Min((maxVolume - existingVolume), liquidVolume.Volume)
             );
             return true;
           }
