@@ -60,6 +60,19 @@
     <tag Name="NoDataDisk" />
   </object>
 
+  <object Name="MUNDANITY_ActiveMotorizedSponge" Inherits="BaseRobot">
+    <part Name="Body" Anatomy="MUNDANITY_MotorizedSpongeBody" />
+    <part Name="Render" Tile="items/MotorizedSponge.png" ColorString="&amp;W" DetailColor="y" DisplayName="motorized sponge" />
+    <part Name="Description" Short="When released, the porous mass tumbles forward of its own volition, picking up detritus and grime as it trundles along. It attempts to wiggle around the obstacles it inevitably collides with." />
+    <part Name="Brain" Hostile="false" Calm="True" Factions="Prey-100,Robots-25" Wanders="true" />
+    <part Name="MUNDANITY_Cleaner"/>
+    <part Name="MUNDANITY_Sponger" />
+    <part Name="MUNDANITY_AIMotorizedSponge" />
+    <part Name="Physics" FlameTemperature="350" />
+    <removepart Name="Metal" />
+    <tag Name="NoDataDisk" />
+  </object>
+
   <object Name="MUNDANITY_EtchingStylus" Inherits="MUNDANITY_BaseMundaneTrinket">
     <part Name="Render" Tile="items/EtchingStylus.png" ColorString="&amp;K" DetailColor="Y" DisplayName="etching stylus" />
     <part Name="Description" Short="Steel forms the needle tip of the plastic pen. Sparks fly when touched to metal and cut a precise indent." />

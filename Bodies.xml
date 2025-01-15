@@ -1,0 +1,13 @@
+<bodies>
+	<bodyparttypevariants>
+		<bodyparttypevariant VariantOf="Head" Type="Spongey Mass" Category="Mechanical" />
+	</bodyparttypevariants>
+
+	<anatomies>
+		<anatomy Name="MUNDANITY_MotorizedSpongeBody">
+			<part Type="Spongey Mass" />
+			<part Type="Chassis" />
+			<part Type="Wheels" />
+    </anatomy>
+	</anatomies>
+</bodies>
