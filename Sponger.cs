@@ -25,21 +25,37 @@ namespace XRL.World.Parts
 
     public override bool HandleEvent(EndTurnEvent E) {
       this.Sponge();
+      int dramsToEvaporate = INITIAL_EVAPORATION;
       LiquidCovered liquidCovering;
+      LiquidStained liquidStain;
       if( this.ParentObject.TryGetEffect<LiquidCovered>(out liquidCovering) )
       {
         LiquidVolume liquidVolume = liquidCovering.Liquid;
         if( liquidVolume != null )
-        {
-          int dramsToEvaporate = INITIAL_EVAPORATION;
           for( int index = 0; index < (liquidVolume.Volume - dramsToEvaporate); index++ )
-          {
             if( EVAPORATIVITY_FACTOR.in100())
               ++dramsToEvaporate;
-          }
-          liquidVolume.UseDramsByEvaporativity( dramsToEvaporate );
+      }
+      if( this.ParentObject.TryGetEffect<LiquidStained>(out liquidStain) )
+      {
+        LiquidVolume liquidVolume = liquidCovering.Liquid;
+        if( liquidVolume != null )
+          for( int index = 0; index < (liquidVolume.Volume - dramsToEvaporate); index++ )
+            if( EVAPORATIVITY_FACTOR.in100())
+              ++dramsToEvaporate;
+      }
+      if( liquidCovering != null && dramsToEvaporate > 0 )
+      {
+        LiquidVolume liquidVolume = liquidCovering.Liquid;
+        if( liquidVolume != null )
+        {
+          int coveringDramsToEvaporate = Math.Min(dramsToEvaporate, liquidVolume.Volume);
+          liquidVolume.UseDramsByEvaporativity( coveringDramsToEvaporate );
+          dramsToEvaporate -= coveringDramsToEvaporate;
         }
       }
+      if( liquidStain != null && liquidStain.Liquid != null && dramsToEvaporate > 0 )
+        liquidStain.Liquid.UseDramsByEvaporativity( Math.Min(dramsToEvaporate, liquidStain.Liquid.Volume) );
       return base.HandleEvent(E);
     }
 
@@ -55,10 +71,12 @@ namespace XRL.World.Parts
           int maxVolume = this.ParentObject.GetMaximumLiquidExposure();
           LiquidCovered liquidCovering;
           if( this.ParentObject.TryGetEffect<LiquidCovered>(out liquidCovering) )
-          {
             if( liquidCovering.Liquid != null )
-              existingVolume = liquidCovering.Liquid.Volume;
-          }
+              existingVolume += liquidCovering.Liquid.Volume;
+          LiquidStained liquidStain;
+          if( this.ParentObject.TryGetEffect<LiquidStained>(out liquidStain) )
+            if( liquidStain.Liquid != null )
+              existingVolume += liquidStain.Liquid.Volume;
           if( existingVolume < maxVolume )
           {
             bool requestInterfaceExit = false;
